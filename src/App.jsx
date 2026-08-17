@@ -406,7 +406,7 @@ const CONTENT = {
   intro:
     "Data science and engineering focused on AI/ML systems, data pipelines, and analytics. I build production-ready solutions that combine strong technical foundations, modern ML workflows, and clear communication for stakeholders.",
   location: "New York City, NY",
-  email: "shenkarrajanee@gmail.com | rshenkar@stevens.edu",
+  email: "shenkarrajanee@gmail.com",
   linkedin: "https://www.linkedin.com/in/rajanee-shenkar-a1862626b/",
   github: "https://github.com/rajniiii",
   resumeUrl: "https://drive.google.com/file/d/1b6NvyXdw-Bn2tt6wqXdvZe-lFVWkw1ZC/view?usp=drive_link",
@@ -775,6 +775,8 @@ export default function App() {
               <span className="kicker">Data Science · AI · ML Engineering</span>
               <h1 className="heroTitle">Hey, I’m Rajanee.</h1>
               <p className="heroLead">{c.intro}</p>
+              <p className="authLine">Work Authorization – OPT + STEM Extension, 
+                                                             3 years, no sponsorship needed</p>
               <div className="heroCtas">
                 <LinkBtn href={c.linkedin}>LinkedIn</LinkBtn>
                 <LinkBtn href={c.github}>GitHub</LinkBtn>

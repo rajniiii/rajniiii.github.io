@@ -55,6 +55,14 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.authLine {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b6450;
+  text-align: left;
+}
+
 .topbarInner {
   display: flex;
   align-items: center;
