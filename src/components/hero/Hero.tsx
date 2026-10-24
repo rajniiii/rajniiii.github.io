@@ -66,10 +66,6 @@ export function Hero() {
                 <span className="bg-forest motif-pulse inline-block h-1.5 w-1.5 rounded-full" aria-hidden="true" />
                 {profile.availability}
               </span>
-              <span className="text-hair-strong hidden sm:inline" aria-hidden="true">
-                /
-              </span>
-              <span className="eyebrow">{profile.location}</span>
             </div>
 
             <h1 className="display-xl mt-7 max-w-[20ch]">
@@ -124,8 +120,9 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="text-slate-soft mt-8 font-mono text-[0.6875rem] tracking-[0.06em]">
+            <p className="text-slate-soft mt-8 font-mono text-[0.6875rem] leading-relaxed tracking-[0.06em]">
               {profile.authorization}
+              <span className="block">{profile.relocation}</span>
             </p>
           </div>
 

@@ -18,6 +18,7 @@ export const profile = {
     "LLM evaluation, agent tooling, data pipelines, GTM intelligence. The common thread is engineering that ends in a decision someone actually has to make — and that can explain itself when they ask why.",
   availability: "Open to AI / Data Engineering roles",
   authorization: "OPT + STEM extension · 3 years · no sponsorship required",
+  relocation: "Open to relocation · based in New York City",
   photo: {
     src: "/assets/profile/profile-winter.jpg",
     alt: "Rajanee Shenkar",
