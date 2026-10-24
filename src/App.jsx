@@ -561,6 +561,22 @@ const CONTENT = {
   ],
   projects: [
     {
+      title: "Market Radar",
+      icon: "📡",
+      techStack: ["Tavily", "Gemini API", "SQLite Cloud", "Streamlit", "Slack"],
+      bullets: [
+        "Built a GTM engine that sources companies against an ICP (Tavily for discovery, Gemini for extraction and scoring), fitting each account 0-100 and tracking buying signals like job postings, funding/news, and technology mentions.",
+        "Combined signals into a priority score that weights recency and multi-signal accounts, moving each account through Cold → Watching → Engaged → Sales Ready on deterministic rules so every stage change is explainable, with Slack alerts firing the reason once an account goes Sales Ready.",
+        "Stored data in SQLite Cloud with a Streamlit dashboard surfacing the ranked, explained list for sales to act on.",
+      ],
+      links: [
+        {
+          label: "Demo",
+          url: "https://drive.google.com/drive/folders/1URPR2sHRQiNMCd2oQTw-aXckg1zy_HoC",
+        },
+      ],
+    },
+    {
       title: "Playbook Forge",
       icon: "🛠️",
       techStack: ["Docker Compose", "MySQL", "ChromaDB", "Ollama", "FastAPI", "MCP Server"],
