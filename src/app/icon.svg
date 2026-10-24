@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#FBF8F3"/>
+  <path d="M0 14A14 14 0 0 1 14 0h36a14 14 0 0 1 14 14v8H0Z" fill="#E8DFF5"/>
+  <circle cx="48" cy="12" r="3" fill="#655080"/>
+  <text x="32" y="48" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#29283A">RS</text>
+</svg>
