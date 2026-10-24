@@ -34,7 +34,10 @@ export function Contact() {
           <dl className="divide-hair mt-5 divide-y">
             <div className="py-3.5 first:pt-0">
               <dt className="eyebrow">Based in</dt>
-              <dd className="text-ink mt-1.5 text-[0.9375rem]">{profile.location}</dd>
+              <dd className="text-ink mt-1.5 text-[0.9375rem]">
+                {profile.location}
+                <span className="text-slate"> · open to relocation</span>
+              </dd>
             </div>
             <div className="py-3.5">
               <dt className="eyebrow">Status</dt>
