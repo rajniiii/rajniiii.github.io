@@ -15,8 +15,8 @@ export function HeroSchematic({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="hero-core" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#E8DFF5" />
-          <stop offset="100%" stopColor="#DCEAF7" />
+          <stop offset="0%" stopColor="var(--color-lavender)" />
+          <stop offset="100%" stopColor="var(--color-powder)" />
         </linearGradient>
       </defs>
 
@@ -28,8 +28,8 @@ export function HeroSchematic({ className }: { className?: string }) {
             width="84"
             height="30"
             rx="15"
-            fill="#FFFDFA"
-            stroke="rgba(41,40,58,0.18)"
+            fill="var(--color-paper)"
+            stroke="var(--color-hair-strong)"
           />
           <text
             x="46"
@@ -38,22 +38,22 @@ export function HeroSchematic({ className }: { className?: string }) {
             fontFamily="var(--font-mono), monospace"
             fontSize="10"
             letterSpacing="0.1em"
-            fill="#5F5E70"
+            fill="var(--color-slate)"
           >
             {input.label}
           </text>
           <path
             d={`M90 ${input.y + 15} C 118 ${input.y + 15}, 124 98, 146 98`}
             fill="none"
-            stroke="rgba(101,80,128,0.42)"
+            stroke="var(--line-accent)"
             strokeWidth="1.1"
           />
         </g>
       ))}
 
-      <circle cx="146" cy="98" r="3" fill="#655080" className="motif-pulse" />
+      <circle cx="146" cy="98" r="3" fill="var(--color-plum)" className="motif-pulse" />
 
-      <rect x="150" y="56" width="104" height="84" rx="14" fill="url(#hero-core)" stroke="rgba(41,40,58,0.16)" />
+      <rect x="150" y="56" width="104" height="84" rx="14" fill="url(#hero-core)" stroke="var(--color-hair)" />
       <text
         x="202"
         y="88"
@@ -61,7 +61,7 @@ export function HeroSchematic({ className }: { className?: string }) {
         fontFamily="var(--font-mono), monospace"
         fontSize="9.5"
         letterSpacing="0.12em"
-        fill="#3D3C51"
+        fill="var(--color-ink)"
       >
         retrieve
       </text>
@@ -72,7 +72,7 @@ export function HeroSchematic({ className }: { className?: string }) {
         fontFamily="var(--font-mono), monospace"
         fontSize="9.5"
         letterSpacing="0.12em"
-        fill="#3D3C51"
+        fill="var(--color-ink)"
       >
         score
       </text>
@@ -83,21 +83,21 @@ export function HeroSchematic({ className }: { className?: string }) {
         fontFamily="var(--font-mono), monospace"
         fontSize="9.5"
         letterSpacing="0.12em"
-        fill="#3D3C51"
+        fill="var(--color-ink)"
       >
         gate
       </text>
 
-      <path d="M254 98h22" stroke="rgba(41,40,58,0.3)" strokeWidth="1.1" />
-      <path d="M272 94l6 4-6 4" fill="none" stroke="rgba(41,40,58,0.3)" strokeWidth="1.1" />
+      <path d="M254 98h22" stroke="var(--color-hair-strong)" strokeWidth="1.1" />
+      <path d="M272 94l6 4-6 4" fill="none" stroke="var(--color-hair-strong)" strokeWidth="1.1" />
 
-      <rect x="282" y="62" width="72" height="22" rx="6" fill="#DDE8D8" stroke="rgba(69,99,77,0.28)" />
-      <rect x="282" y="88" width="72" height="22" rx="6" fill="#FFFDFA" stroke="rgba(41,40,58,0.14)" />
-      <rect x="282" y="114" width="72" height="22" rx="6" fill="#FFFDFA" stroke="rgba(41,40,58,0.14)" />
+      <rect x="282" y="62" width="72" height="22" rx="6" fill="var(--color-sage)" stroke="var(--line-forest)" />
+      <rect x="282" y="88" width="72" height="22" rx="6" fill="var(--color-paper)" stroke="var(--color-hair)" />
+      <rect x="282" y="114" width="72" height="22" rx="6" fill="var(--color-paper)" stroke="var(--color-hair)" />
       {[73, 99, 125].map((y, index) => (
         <g key={y}>
-          <rect x="290" y={y - 3.5} width={index === 0 ? 38 : index === 1 ? 26 : 16} height="4" rx="2" fill="rgba(41,40,58,0.3)" />
-          <circle cx="344" cy={y} r="2.5" fill={index === 0 ? "#45634D" : "rgba(41,40,58,0.2)"} />
+          <rect x="290" y={y - 3.5} width={index === 0 ? 38 : index === 1 ? 26 : 16} height="4" rx="2" fill="var(--color-hair-strong)" />
+          <circle cx="344" cy={y} r="2.5" fill={index === 0 ? "var(--color-forest)" : "var(--color-hair-strong)"} />
         </g>
       ))}
 
@@ -108,7 +108,7 @@ export function HeroSchematic({ className }: { className?: string }) {
         fontFamily="var(--font-mono), monospace"
         fontSize="8.5"
         letterSpacing="0.06em"
-        fill="#68677A"
+        fill="var(--color-slate-soft)"
       >
         ranked · explained
       </text>

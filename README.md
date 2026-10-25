@@ -75,8 +75,15 @@ public/           résumé PDF, profile images, og.png, .nojekyll
 - **Motion is optional.** Content renders visible in the HTML; GSAP only animates after confirming
   `prefers-reduced-motion` is not set. Pointer effects additionally require a fine pointer, so touch
   devices get static panels.
-- **Colour.** Pastels are surfaces; text uses `ink`, `slate` or one of the darker accents
-  (`plum`, `forest`, `clay`, `marine`) so contrast holds on ivory.
+- **Colour.** Pastels are surfaces; text uses `ink`, `slate` or one of the accents
+  (`plum`, `forest`, `clay`, `marine`). Every pairing is checked for WCAG AA in both themes.
+- **Theming.** Token names are roles, not literal colours — in dark mode `ivory` is the dark
+  ground and `ink` is the light type, so components never branch on theme. The dark values live
+  once in `globals.css` as `--dark-*`; two blocks remap the tokens onto them (one for an explicit
+  `data-theme="dark"`, one for `prefers-color-scheme` when no choice is stored). An inline script
+  in the document head stamps `data-theme` before first paint, so there is no flash. The toggle in
+  the nav only flips that attribute and writes `localStorage.theme`; which icon shows is decided in
+  CSS. Diagram SVGs use `var(--color-*)` rather than hex so they flip too.
 - **Claims.** Project copy describes only what the linked repository or demo actually contains, and
   each case study ends with a "what this does not claim" section. Keep it that way.
 

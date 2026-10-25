@@ -39,50 +39,50 @@ export function RagProbeVisual() {
         <span className="eyebrow">two paths, one index</span>
         <svg viewBox="0 0 360 118" className="mt-3 h-auto w-full max-w-[560px]" role="img" aria-label="Baseline retrieves five chunks and generates. Hardened retrieves ten chunks, re-ranks, keeps three, cites sources, and refuses below a 0.40 confidence score.">
           {/* baseline track */}
-          <text x="0" y="12" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="0.1em" fill="#68677A">
+          <text x="0" y="12" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="0.1em" fill="var(--color-slate-soft)">
             BASELINE
           </text>
-          <rect x="0" y="20" width="62" height="24" rx="12" fill="#FFFDFA" stroke="rgba(41,40,58,0.18)" />
-          <text x="31" y="35.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#5F5E70">
+          <rect x="0" y="20" width="62" height="24" rx="12" fill="var(--color-paper)" stroke="var(--color-hair-strong)" />
+          <text x="31" y="35.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-slate)">
             top-5
           </text>
-          <path d="M66 32h36" stroke="rgba(41,40,58,0.25)" strokeWidth="1" />
-          <path d="M98 28.5l5 3.5-5 3.5" fill="none" stroke="rgba(41,40,58,0.25)" strokeWidth="1" />
-          <rect x="106" y="20" width="78" height="24" rx="12" fill="#FFFDFA" stroke="rgba(41,40,58,0.18)" />
-          <text x="145" y="35.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#5F5E70">
+          <path d="M66 32h36" stroke="var(--color-hair-strong)" strokeWidth="1" />
+          <path d="M98 28.5l5 3.5-5 3.5" fill="none" stroke="var(--color-hair-strong)" strokeWidth="1" />
+          <rect x="106" y="20" width="78" height="24" rx="12" fill="var(--color-paper)" stroke="var(--color-hair-strong)" />
+          <text x="145" y="35.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-slate)">
             generate
           </text>
 
           {/* hardened track */}
-          <text x="0" y="68" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="0.1em" fill="#655080">
+          <text x="0" y="68" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="0.1em" fill="var(--color-plum)">
             HARDENED
           </text>
-          <rect x="0" y="76" width="62" height="24" rx="12" fill="#E8DFF5" stroke="rgba(101,80,128,0.3)" />
-          <text x="31" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#3D3C51">
+          <rect x="0" y="76" width="62" height="24" rx="12" fill="var(--color-lavender)" stroke="var(--line-accent)" />
+          <text x="31" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-ink)">
             top-10
           </text>
-          <path d="M66 88h22" stroke="rgba(101,80,128,0.4)" strokeWidth="1" />
-          <path d="M84 84.5l5 3.5-5 3.5" fill="none" stroke="rgba(101,80,128,0.4)" strokeWidth="1" />
-          <rect x="92" y="76" width="68" height="24" rx="12" fill="#E8DFF5" stroke="rgba(101,80,128,0.3)" />
-          <text x="126" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#3D3C51">
+          <path d="M66 88h22" stroke="var(--line-accent)" strokeWidth="1" />
+          <path d="M84 84.5l5 3.5-5 3.5" fill="none" stroke="var(--line-accent)" strokeWidth="1" />
+          <rect x="92" y="76" width="68" height="24" rx="12" fill="var(--color-lavender)" stroke="var(--line-accent)" />
+          <text x="126" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-ink)">
             re-rank
           </text>
-          <path d="M164 88h22" stroke="rgba(101,80,128,0.4)" strokeWidth="1" />
-          <path d="M182 84.5l5 3.5-5 3.5" fill="none" stroke="rgba(101,80,128,0.4)" strokeWidth="1" />
-          <rect x="190" y="76" width="60" height="24" rx="12" fill="#E8DFF5" stroke="rgba(101,80,128,0.3)" />
-          <text x="220" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#3D3C51">
+          <path d="M164 88h22" stroke="var(--line-accent)" strokeWidth="1" />
+          <path d="M182 84.5l5 3.5-5 3.5" fill="none" stroke="var(--line-accent)" strokeWidth="1" />
+          <rect x="190" y="76" width="60" height="24" rx="12" fill="var(--color-lavender)" stroke="var(--line-accent)" />
+          <text x="220" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-ink)">
             top-3
           </text>
-          <path d="M254 88h22" stroke="rgba(101,80,128,0.4)" strokeWidth="1" />
-          <path d="M250 84.5l5 3.5-5 3.5" fill="none" stroke="rgba(101,80,128,0.4)" strokeWidth="1" transform="translate(22,0)" />
-          <rect x="278" y="76" width="82" height="24" rx="12" fill="#FFFDFA" stroke="rgba(101,80,128,0.3)" />
-          <text x="319" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="#5F5E70">
+          <path d="M254 88h22" stroke="var(--line-accent)" strokeWidth="1" />
+          <path d="M250 84.5l5 3.5-5 3.5" fill="none" stroke="var(--line-accent)" strokeWidth="1" transform="translate(22,0)" />
+          <rect x="278" y="76" width="82" height="24" rx="12" fill="var(--color-paper)" stroke="var(--line-accent)" />
+          <text x="319" y="91.5" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" fill="var(--color-slate)">
             cite / refuse
           </text>
 
           {/* refusal gate annotation */}
-          <path d="M319 72V58h-44" stroke="rgba(138,83,64,0.45)" strokeWidth="1" strokeDasharray="3 3" fill="none" />
-          <text x="271" y="55" textAnchor="end" fontFamily="var(--font-mono), monospace" fontSize="8.5" fill="#8A5340">
+          <path d="M319 72V58h-44" stroke="var(--line-clay)" strokeWidth="1" strokeDasharray="3 3" fill="none" />
+          <text x="271" y="55" textAnchor="end" fontFamily="var(--font-mono), monospace" fontSize="8.5" fill="var(--color-clay)">
             score &lt; 0.40 → refuse
           </text>
         </svg>

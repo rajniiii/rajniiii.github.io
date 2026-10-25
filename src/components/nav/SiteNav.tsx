@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 import { profile } from "@/data/profile";
 import { cx } from "@/lib/utils";
 
@@ -64,22 +65,26 @@ export function SiteNav() {
           >
             Résumé
           </a>
+          <ThemeToggle />
         </nav>
 
-        <button
-          type="button"
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
           onClick={() => setOpen((value) => !value)}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          className="border-hair-strong text-ink flex items-center gap-2 rounded-full border px-3.5 py-2 font-mono text-[0.6875rem] tracking-[0.1em] uppercase md:hidden"
-        >
-          {open ? "Close" : "Menu"}
-          <span aria-hidden="true" className="flex h-2.5 w-3.5 flex-col justify-between">
-            <span className={cx("h-px w-full bg-current transition-transform duration-300", open && "translate-y-[5px] rotate-45")} />
-            <span className={cx("h-px w-full bg-current transition-opacity duration-300", open && "opacity-0")} />
-            <span className={cx("h-px w-full bg-current transition-transform duration-300", open && "-translate-y-[5px] -rotate-45")} />
-          </span>
-        </button>
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            className="border-hair-strong text-ink flex items-center gap-2 rounded-full border px-3.5 py-2 font-mono text-[0.6875rem] tracking-[0.1em] uppercase"
+          >
+            {open ? "Close" : "Menu"}
+            <span aria-hidden="true" className="flex h-2.5 w-3.5 flex-col justify-between">
+              <span className={cx("h-px w-full bg-current transition-transform duration-300", open && "translate-y-[5px] rotate-45")} />
+              <span className={cx("h-px w-full bg-current transition-opacity duration-300", open && "opacity-0")} />
+              <span className={cx("h-px w-full bg-current transition-transform duration-300", open && "-translate-y-[5px] -rotate-45")} />
+            </span>
+          </button>
+        </div>
       </div>
 
       <div

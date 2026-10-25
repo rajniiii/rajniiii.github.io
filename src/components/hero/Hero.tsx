@@ -44,14 +44,7 @@ export function Hero() {
   return (
     <section ref={root} id="top" className="relative overflow-hidden pt-28 pb-16 sm:pt-32 md:pt-40 md:pb-24">
       {/* Decorative ground: a soft pastel wash and a fading engineering grid */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 88% -10%, rgba(232,223,245,0.75) 0%, rgba(220,234,247,0.35) 38%, rgba(251,248,243,0) 68%)",
-        }}
-      />
+      <div aria-hidden="true" className="hero-wash pointer-events-none absolute inset-0 -z-10" />
       <div
         aria-hidden="true"
         className="grid-paper pointer-events-none absolute inset-x-0 top-0 -z-10 h-[460px] opacity-70"

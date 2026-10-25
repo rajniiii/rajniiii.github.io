@@ -42,6 +42,121 @@
   --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/*
+ * Theming
+ * -------
+ * Token names are roles, not literal colours: in dark mode "ivory" is the page
+ * ground and "ink" is the type, same as in light. Dark values live once below;
+ * the two blocks that follow only remap the tokens onto them. An inline script
+ * in the document head stamps data-theme before first paint, and the media
+ * query covers the no-JS case.
+ */
+:root {
+  color-scheme: light;
+
+  --line-accent: rgba(101, 80, 128, 0.4);
+  --line-forest: rgba(69, 99, 77, 0.3);
+  --line-clay: rgba(138, 83, 64, 0.45);
+  --grid-ink: rgba(41, 40, 58, 0.055);
+  --dot-ink: rgba(41, 40, 58, 0.14);
+  --panel-shadow: 0 1px 1px rgba(41, 40, 58, 0.02), 0 12px 32px -22px rgba(41, 40, 58, 0.22);
+  --hero-wash: radial-gradient(
+    120% 80% at 88% -10%,
+    rgba(232, 223, 245, 0.75) 0%,
+    rgba(220, 234, 247, 0.35) 38%,
+    rgba(251, 248, 243, 0) 68%
+  );
+
+  /* Dark palette — single source of truth */
+  --dark-ivory: #15141c;
+  --dark-paper: #1c1b26;
+  --dark-shell: #262432;
+  --dark-ink: #f3f0ea;
+  --dark-slate: #b5b1c0;
+  --dark-slate-soft: #9a95a8;
+  --dark-lavender: #2c2540;
+  --dark-powder: #1e2a3a;
+  --dark-sage: #212e25;
+  --dark-peach: #352619;
+  --dark-cream: #322b17;
+  --dark-plum: #c5abe8;
+  --dark-forest: #9fcfa8;
+  --dark-clay: #e3ac8d;
+  --dark-marine: #a3c6ea;
+  --dark-hair: rgba(243, 240, 234, 0.12);
+  --dark-hair-strong: rgba(243, 240, 234, 0.26);
+  --dark-line-accent: rgba(197, 171, 232, 0.42);
+  --dark-line-forest: rgba(159, 207, 168, 0.38);
+  --dark-line-clay: rgba(227, 172, 141, 0.45);
+  --dark-grid-ink: rgba(243, 240, 234, 0.05);
+  --dark-dot-ink: rgba(243, 240, 234, 0.1);
+  --dark-panel-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 16px 36px -24px rgba(0, 0, 0, 0.9);
+  --dark-hero-wash: radial-gradient(
+    120% 80% at 88% -10%,
+    rgba(92, 72, 128, 0.42) 0%,
+    rgba(42, 62, 86, 0.24) 38%,
+    rgba(21, 20, 28, 0) 68%
+  );
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ivory: var(--dark-ivory);
+  --color-paper: var(--dark-paper);
+  --color-shell: var(--dark-shell);
+  --color-ink: var(--dark-ink);
+  --color-slate: var(--dark-slate);
+  --color-slate-soft: var(--dark-slate-soft);
+  --color-lavender: var(--dark-lavender);
+  --color-powder: var(--dark-powder);
+  --color-sage: var(--dark-sage);
+  --color-peach: var(--dark-peach);
+  --color-cream: var(--dark-cream);
+  --color-plum: var(--dark-plum);
+  --color-forest: var(--dark-forest);
+  --color-clay: var(--dark-clay);
+  --color-marine: var(--dark-marine);
+  --color-hair: var(--dark-hair);
+  --color-hair-strong: var(--dark-hair-strong);
+  --line-accent: var(--dark-line-accent);
+  --line-forest: var(--dark-line-forest);
+  --line-clay: var(--dark-line-clay);
+  --grid-ink: var(--dark-grid-ink);
+  --dot-ink: var(--dark-dot-ink);
+  --panel-shadow: var(--dark-panel-shadow);
+  --hero-wash: var(--dark-hero-wash);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-ivory: var(--dark-ivory);
+    --color-paper: var(--dark-paper);
+    --color-shell: var(--dark-shell);
+    --color-ink: var(--dark-ink);
+    --color-slate: var(--dark-slate);
+    --color-slate-soft: var(--dark-slate-soft);
+    --color-lavender: var(--dark-lavender);
+    --color-powder: var(--dark-powder);
+    --color-sage: var(--dark-sage);
+    --color-peach: var(--dark-peach);
+    --color-cream: var(--dark-cream);
+    --color-plum: var(--dark-plum);
+    --color-forest: var(--dark-forest);
+    --color-clay: var(--dark-clay);
+    --color-marine: var(--dark-marine);
+    --color-hair: var(--dark-hair);
+    --color-hair-strong: var(--dark-hair-strong);
+    --line-accent: var(--dark-line-accent);
+    --line-forest: var(--dark-line-forest);
+    --line-clay: var(--dark-line-clay);
+    --grid-ink: var(--dark-grid-ink);
+    --dot-ink: var(--dark-dot-ink);
+    --panel-shadow: var(--dark-panel-shadow);
+    --hero-wash: var(--dark-hero-wash);
+  }
+}
+
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
@@ -144,20 +259,20 @@
 
 /* Fine engineering-paper grid, kept near-invisible so text stays dominant */
 @utility grid-paper {
-  background-image: linear-gradient(to right, rgba(41, 40, 58, 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(41, 40, 58, 0.055) 1px, transparent 1px);
+  background-image: linear-gradient(to right, var(--grid-ink) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-ink) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 @utility dot-paper {
-  background-image: radial-gradient(rgba(41, 40, 58, 0.14) 1px, transparent 1px);
+  background-image: radial-gradient(var(--dot-ink) 1px, transparent 1px);
   background-size: 18px 18px;
 }
 
 @utility shell-panel {
   background-color: var(--color-paper);
   border: 1px solid var(--color-hair);
-  box-shadow: 0 1px 1px rgba(41, 40, 58, 0.02), 0 12px 32px -22px rgba(41, 40, 58, 0.22);
+  box-shadow: var(--panel-shadow);
 }
 
 /* Lift on hover for interactive panels; neutralised for reduced motion */
@@ -219,6 +334,48 @@
   .motif-spin,
   .motif-pulse {
     animation: none !important;
+  }
+}
+
+/* Theme toggle icons: the root attribute decides which one is visible */
+.theme-icon-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon-light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .theme-icon-dark {
+    display: block;
+  }
+}
+
+@utility hero-wash {
+  background: var(--hero-wash);
+}
+
+/* Theme flip: colours cross-fade, everything else stays put */
+body,
+body * {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body * {
+    transition-property: none;
   }
 }
 
