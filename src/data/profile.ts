@@ -2,7 +2,7 @@ export const SITE_URL = "https://rajniiii.github.io";
 
 export const profile = {
   name: "Rajanee Shenkar",
-  role: "AI & Data Engineer",
+  role: "Data Science & Analytics",
   location: "New York City, NY",
   email: "shenkarrajanee@gmail.com",
   linkedin: "https://www.linkedin.com/in/rajanee-shenkar-a1862626b/",

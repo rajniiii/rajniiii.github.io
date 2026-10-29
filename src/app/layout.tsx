@@ -29,20 +29,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const description =
-  "Rajanee Shenkar — AI & Data Engineer in New York. LLM evaluation, agent tooling, data pipelines and GTM intelligence, with case studies on RagProbe, Market Radar, Playbook Forge and an MCP market-data agent.";
+  "Rajanee Shenkar — data science and analytics in New York. Tableau dashboards on global energy, LLM evaluation, agent tooling and data pipelines, with case studies on RagProbe, Market Radar, Playbook Forge and an MCP market-data agent.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Rajanee Shenkar — AI & Data Engineer",
+    default: "Rajanee Shenkar — Data Science & Analytics",
     template: "%s — Rajanee Shenkar",
   },
   description,
   alternates: { canonical: "/" },
   authors: [{ name: profile.name, url: SITE_URL }],
   keywords: [
-    "AI engineer",
-    "data engineer",
+    "data scientist",
+    "data analyst",
+    "data science",
+    "Tableau",
     "LLM evaluation",
     "RAG",
     "MCP",
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "Rajanee Shenkar",
-    title: "Rajanee Shenkar — AI & Data Engineer",
+    title: "Rajanee Shenkar — Data Science & Analytics",
     description,
     locale: "en_US",
     images: [
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rajanee Shenkar — AI & Data Engineer",
+    title: "Rajanee Shenkar — Data Science & Analytics",
     description,
     images: ["/og.png"],
   },
