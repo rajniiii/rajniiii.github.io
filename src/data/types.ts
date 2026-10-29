@@ -56,6 +56,8 @@ export interface SideProject {
 export interface Role {
   readonly company: string;
   readonly role: string;
+  /** Small qualifier set beside the title, e.g. "intern". */
+  readonly level?: string;
   readonly dates: string;
   readonly location?: string;
   readonly summary: string;

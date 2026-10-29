@@ -13,7 +13,14 @@ export function Experience() {
           <div className="grid gap-6 md:grid-cols-12 md:gap-8">
             <div className="md:col-span-4">
               <span className="eyebrow">current</span>
-              <h3 className="display-sm mt-2.5">{lead.role}</h3>
+              <h3 className="display-sm mt-2.5">
+                {lead.role}
+                {lead.level ? (
+                  <span className="text-slate ml-2.5 align-middle font-mono text-[0.6875rem] tracking-[0.14em] uppercase">
+                    {lead.level}
+                  </span>
+                ) : null}
+              </h3>
               <p className="text-ink mt-1.5 text-[0.9375rem]">{lead.company}</p>
               <p className="text-slate-soft mt-2 font-mono text-[0.6875rem] tracking-[0.06em]">{lead.dates}</p>
             </div>
@@ -41,7 +48,14 @@ export function Experience() {
         {rest.map((role) => (
           <article key={role.company} className="grid gap-x-8 gap-y-2 py-6 md:grid-cols-12">
             <div className="md:col-span-4">
-              <h3 className="font-display text-ink text-[1.25rem] leading-tight">{role.role}</h3>
+              <h3 className="font-display text-ink text-[1.25rem] leading-tight">
+                {role.role}
+                {role.level ? (
+                  <span className="text-slate ml-2 align-middle font-mono text-[0.625rem] tracking-[0.14em] uppercase">
+                    {role.level}
+                  </span>
+                ) : null}
+              </h3>
               <p className="text-slate mt-1 text-[0.875rem]">{role.company}</p>
             </div>
             <p className="text-slate-soft font-mono text-[0.6875rem] tracking-[0.06em] md:col-span-2 md:pt-1.5">

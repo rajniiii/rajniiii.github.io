@@ -82,7 +82,7 @@ export default function HomePage() {
         <SectionHeading
           index="04 / Experience"
           title="Where the work has happened"
-          note="Five roles across AI tooling, backend data services and operational reporting."
+          note="Five roles across data tooling, backend data services and operational reporting."
         />
         <Experience />
       </Band>

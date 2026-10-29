@@ -3,7 +3,8 @@ import type { Role } from "./types";
 export const roles: readonly Role[] = [
   {
     company: "Easley-Dunn Productions",
-    role: "AI Engineer Intern",
+    role: "Data Engineer and Analyst",
+    level: "intern",
     dates: "Jun 2026 — Present",
     summary:
       "Building a node-based game-balance simulation tool so designers can model and test mechanics without reading the code that implements them.",
