@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Hero } from "@/components/hero/Hero";
 import { FeaturedWork } from "@/components/work/FeaturedWork";
 import { AdditionalWork } from "@/components/work/AdditionalWork";
+import { Dashboards } from "@/components/dashboards/Dashboards";
 import { Experience } from "@/components/experience/Experience";
 import { Skills } from "@/components/skills/Skills";
 import { Background } from "@/components/background/Background";
@@ -59,9 +60,18 @@ export default function HomePage() {
         <FeaturedWork />
       </Band>
 
+      <Band id="dashboards">
+        <SectionHeading
+          index="02 / Dashboards"
+          title="Four views of the energy transition"
+          note="Where the world's electricity comes from, country by country: solar, hydro and wind set against nuclear, geothermal and biofuel, and how that mix has shifted year over year."
+        />
+        <Dashboards />
+      </Band>
+
       <Band id="more-work" className="bg-shell/45 border-hair border-y">
         <SectionHeading
-          index="02 / Additional work"
+          index="03 / Additional work"
           title="Also on the bench"
           note="Smaller builds, coursework that outgrew its assignment, and one hackathon weekend."
         />
@@ -70,7 +80,7 @@ export default function HomePage() {
 
       <Band id="experience">
         <SectionHeading
-          index="03 / Experience"
+          index="04 / Experience"
           title="Where the work has happened"
           note="Five roles across AI tooling, backend data services and operational reporting."
         />
@@ -79,7 +89,7 @@ export default function HomePage() {
 
       <Band id="capabilities" className="dot-paper">
         <SectionHeading
-          index="04 / Capabilities"
+          index="05 / Capabilities"
           title="What I reach for"
           note="Grouped by what it is for, rather than by how long the list can be made to look."
         />
@@ -87,7 +97,7 @@ export default function HomePage() {
       </Band>
 
       <Band id="background">
-        <SectionHeading index="05 / Background" title="Degrees, a paper, and the rest" />
+        <SectionHeading index="06 / Background" title="Degrees, a paper, and the rest" />
         <Background />
       </Band>
 

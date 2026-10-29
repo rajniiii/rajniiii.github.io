@@ -74,6 +74,14 @@ export function Contact() {
             >
               GitHub
             </a>
+            <a
+              href={profile.tableau}
+              target="_blank"
+              rel="noreferrer"
+              className="border-hair-strong text-ink hover:border-plum hover:text-plum rounded-full border px-5 py-2.5 font-mono text-[0.75rem] tracking-[0.1em] uppercase transition-colors duration-300"
+            >
+              Tableau
+            </a>
           </div>
         </div>
       </div>

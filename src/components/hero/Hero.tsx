@@ -111,6 +111,14 @@ export function Hero() {
               >
                 LinkedIn
               </a>
+              <a
+                href={profile.tableau}
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate hover:text-ink font-mono text-[0.75rem] tracking-[0.08em] uppercase transition-colors duration-300"
+              >
+                Tableau
+              </a>
             </div>
 
             <p className="text-slate-soft mt-8 font-mono text-[0.6875rem] leading-relaxed tracking-[0.06em]">

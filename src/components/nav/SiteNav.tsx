@@ -8,6 +8,7 @@ import { cx } from "@/lib/utils";
 
 const links = [
   { label: "Work", href: "/#work" },
+  { label: "Dashboards", href: "/#dashboards" },
   { label: "Experience", href: "/#experience" },
   { label: "Capabilities", href: "/#capabilities" },
   { label: "Background", href: "/#background" },
@@ -47,7 +48,7 @@ export function SiteNav() {
           <span className="eyebrow hidden sm:inline">AI &amp; Data Eng.</span>
         </Link>
 
-        <nav aria-label="Sections" className="hidden items-center gap-7 md:flex">
+        <nav aria-label="Sections" className="hidden items-center gap-x-5 lg:flex xl:gap-x-7">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -68,7 +69,7 @@ export function SiteNav() {
           <ThemeToggle />
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -90,7 +91,7 @@ export function SiteNav() {
       <div
         id="mobile-nav"
         hidden={!open}
-        className="bg-ivory/97 border-hair border-t backdrop-blur-md md:hidden"
+        className="bg-ivory/97 border-hair border-t backdrop-blur-md lg:hidden"
       >
         <nav aria-label="Sections" className="flex flex-col px-5 py-2 sm:px-8">
           {links.map((link) => (
