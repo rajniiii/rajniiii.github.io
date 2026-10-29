@@ -45,7 +45,6 @@ export function SiteNav() {
       <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-6 px-5 py-3.5 sm:px-8">
         <Link href="/#top" className="group flex items-baseline gap-2.5" aria-label="Rajanee Shenkar — home">
           <span className="font-display text-ink text-[1.0625rem] leading-none">Rajanee Shenkar</span>
-          <span className="eyebrow hidden sm:inline">AI &amp; Data Eng.</span>
         </Link>
 
         <nav aria-label="Sections" className="hidden items-center gap-x-5 lg:flex xl:gap-x-7">
